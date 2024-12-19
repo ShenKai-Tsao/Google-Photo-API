@@ -23,5 +23,7 @@ print(f"Downloading album: {album_title}")
 
 # List and download media items from the selected album
 media_items = google_photos_api.list_media_items_in_album(album_id)
+
+# 只先針對照片處理 '.JPG', '.HEIC' 處理
 google_photos_api.download_media_items(media_items, 'downloads/' + album_title)
 print(f"Downloaded all media items from album: {album_title}")
